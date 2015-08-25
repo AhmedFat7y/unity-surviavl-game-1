@@ -250,6 +250,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_UseFovKick
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -399,6 +407,101 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!1 &1520863442 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_PrefabInternal: {fileID: 653502785}
+--- !u!114 &1520863443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520863442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fde79beb093261478597b75b1c213c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextureSize: {x: 240, y: 40}
+  HealthComponent:
+    ComponentSize: {x: 0, y: 0}
+    ComponentPosition: {x: 0, y: 0}
+    ComponentBarFullTexture: {fileID: 0}
+    ComponentBarEmptyTexture: {fileID: 0}
+    FallRate: 0
+  HungerComponent:
+    ComponentSize: {x: 0, y: 0}
+    ComponentPosition: {x: 0, y: 0}
+    ComponentBarFullTexture: {fileID: 0}
+    ComponentBarEmptyTexture: {fileID: 0}
+    FallRate: 0
+  ThirstComponent:
+    ComponentSize: {x: 0, y: 0}
+    ComponentPosition: {x: 0, y: 0}
+    ComponentBarFullTexture: {fileID: 0}
+    ComponentBarEmptyTexture: {fileID: 0}
+    FallRate: 0
+  StaminaComponent:
+    ComponentSize: {x: 0, y: 0}
+    ComponentPosition: {x: 0, y: 0}
+    ComponentBarFullTexture: {fileID: 0}
+    ComponentBarEmptyTexture: {fileID: 0}
+    FallRate: 0
+--- !u!114 &1520863448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520863442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab79d7f243824f5d9826bd83522c8df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canControl: 1
+  useFixedUpdate: 1
+  movement:
+    maxForwardSpeed: 10
+    maxSidewaysSpeed: 10
+    maxBackwardsSpeed: 10
+    slopeSpeedMultiplier:
+      serializedVersion: 2
+      m_Curve:
+      - time: -90
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 90
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    maxGroundAcceleration: 30
+    maxAirAcceleration: 20
+    gravity: 10
+    maxFallSpeed: 20
+  jumping:
+    enabled: 1
+    baseHeight: 1
+    extraHeight: 4.0999999
+    perpAmount: 0
+    steepPerpAmount: .5
+  movingPlatform:
+    enabled: 1
+    movementTransfer: 2
+  sliding:
+    enabled: 1
+    slidingSpeed: 15
+    sidewaysControl: 1
+    speedControl: .400000006
 --- !u!1 &1632307707
 GameObject:
   m_ObjectHideFlags: 0
